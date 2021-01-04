@@ -12,7 +12,7 @@ class SingleScanThread : public QThread
     Q_OBJECT
 
 public:
-    SingleScanThread(QStringList, QString ,QString , QThread *parent = 0);
+    SingleScanThread(QStringList, QString, QString, QStringList, QThread *parent = 0);
     void run();
     bool stopSingleThread;
 
@@ -28,7 +28,12 @@ private:
     QString passFileToScan;
     QStringList alist;
     QString location;
+    QStringList hashValues;
+    int hashType;
 
 };
 
 #endif // SINGLESCANTHREAD_H
+
+
+
